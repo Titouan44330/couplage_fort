@@ -4,27 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Orchestre {
-	private List<Object> listeMusiciens;
+	private List<Musicien> listeMusiciens;
 	
 	public Orchestre() {
 		listeMusiciens = new ArrayList<>();
 	}
 	
-	public void ajout(Object musicien) {
+	public void ajout(Musicien musicien) {
 		listeMusiciens.add(musicien);
 	}
 
 	public void jouer() {
-		for(Object object: listeMusiciens) {
-			if(object instanceof Pianiste) {
-				((Pianiste) object).jouerMorceau();				
-			}
-			if(object instanceof Violoniste) {
-				((Violoniste) object).jouerMorceau();				
-			}
-			if(object instanceof Batteur) {
-				((Batteur) object).jouerMorceau();
-			}
+		for(Musicien musicien: listeMusiciens) {
+			musicien.jouerMorceau();
 		}
 	}
 }
