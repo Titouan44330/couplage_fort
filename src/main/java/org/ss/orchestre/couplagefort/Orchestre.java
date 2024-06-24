@@ -2,6 +2,7 @@ package org.ss.orchestre.couplagefort;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Orchestre {
 	private List<Musicien> listeMusiciens;
@@ -15,8 +16,6 @@ public class Orchestre {
 	}
 
 	public void jouer() {
-		for(Musicien musicien: listeMusiciens) {
-			musicien.jouerMorceau();
-		}
+		listeMusiciens.stream().forEach(musicien -> musicien.jouerMorceau());
 	}
 }

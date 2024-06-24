@@ -2,21 +2,21 @@ package org.ss.orchestre.couplagefort;
 public class App {
 	public static void main(String[] args) {
 		System.out.println("Le pianiste : ");
-		Instrument instrument1 = new Instrument("Piano");
+		Piano piano = new Piano();
 		Morceau morceau1 = new Morceau("La 9eme de Beethoven");
-		Musicien pianiste = new Musicien(instrument1,morceau1);
+		Musicien pianiste = new Musicien(piano,morceau1);
 		pianiste.jouerMorceau();
 
 		System.out.println("Le violoniste : ");
-		Instrument instrument2 = new Instrument("Violon");
+		Violon violon = new Violon();
 		Morceau morceau2 = new Morceau("La 9eme de Beethoven");
-		Musicien violoniste = new Musicien(instrument2,morceau2);
+		Musicien violoniste = new Musicien(violon,morceau2);
 		violoniste.jouerMorceau();
 
 		System.out.println("Le batteur : ");
-		Instrument instrument3 = new Instrument("Batterie");
+		Batterie batterie = new Batterie();
 		Morceau morceau3 = new Morceau("La 9eme de Beethoven");
-		Musicien batteur = new Musicien(instrument3, morceau3);
+		Musicien batteur = new Musicien(batterie, morceau3);
 		batteur.jouerMorceau();
 
 		System.out.println("\n L'orchestre : ");
